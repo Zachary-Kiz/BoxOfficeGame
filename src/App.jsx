@@ -5,6 +5,9 @@ import MovieScore from './components/MovieScore/MovieScore'
 import { useEffect } from 'react'
 import {disableReactDevTools} from '@fvilers/disable-react-devtools'
 
+import bgElem from '/hero-bg.png'
+import sound from '/boxOfficeResult.wav'
+
 if (import.meta.env.VITE_ENV === 'production') disableReactDevTools()
 
 const API_OPTIONS = {
@@ -85,8 +88,8 @@ function App() {
 
   return (
     <>
-    <img className='background' src="./assets/hero-bg.png" alt='hero-background'></img>
-    <audio id="clickSound" src="./assets/boxOfficeResult.wav" preload="auto"></audio>
+    <img className='background' src={bgElem} alt='hero-background'></img>
+    <audio id="clickSound" src="/boxOfficeResult.wav" preload="auto"></audio>
     <h2 className='movieHeader'><b>BOX OFFICE HIGHER LOWER</b></h2>
     <div className='container'>
         {movies.map((item, index) => (

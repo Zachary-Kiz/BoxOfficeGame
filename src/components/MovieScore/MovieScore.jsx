@@ -8,7 +8,7 @@ const MovieScore = ({className, title, score}) => {
     const stopAnimation = title == "High Score" ? sessionStorage.getItem('highscore') : 0
 
     useEffect(() => {
-        if (score != stopAnimation) {
+        if (score != stopAnimation && score != 0) {
             setIsScoreChanged(true)
             setTimeout(() => {
                 setIsScoreChanged(false)

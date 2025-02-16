@@ -6,7 +6,6 @@ import { useEffect } from 'react'
 import {disableReactDevTools} from '@fvilers/disable-react-devtools'
 
 import bgElem from '/hero-bg.png'
-import sound from '/boxOfficeResult.wav'
 
 if (import.meta.env.VITE_ENV === 'production') disableReactDevTools()
 
@@ -108,8 +107,7 @@ function App() {
                 <br/>
                 <button className='playAgainButton' onClick={() => reload()}>Play again?</button>
               </div>
-            }
-            
+            } 
       </div>
     </>
 

@@ -8,7 +8,6 @@ const MovieScore = ({className, title, score}) => {
     const [isScoreChanged, setIsScoreChanged] = useState(false)
 
     const stopAnimation = title == "High Score" ? highScore : 0;
-    console.log(stopAnimation)
 
     useEffect(() => {
         if (score != stopAnimation && score != 0) {

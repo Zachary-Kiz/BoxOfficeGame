@@ -76,19 +76,23 @@ body {
 
 .playAgain {
   position:absolute;
-  color: white;
   z-index: 50;
-  background-color: white;
   left: 50%;
   top:50%;
   margin-left: -50px;
   margin-top: -50px;
+  text-align: center;
+}
+
+
+
+.playAgainButton {
   background-color: #0a0b0d;
   color: #1985ff;
   border: #1985ff solid 1px;
 }
 
-.playAgain:hover {
+.playAgainButton:hover {
   background-color: #1985ff;
   color: white;
 }

@@ -88,20 +88,29 @@ function App() {
 
   return (
     <>
-    <img className='background' src={bgElem} alt='hero-background'></img>
-    <audio id="clickSound" src="/boxOfficeResult.wav" preload="auto"></audio>
-    <h2 className='movieHeader'><b>BOX OFFICE HIGHER LOWER</b></h2>
-    <div className='container'>
-        {movies.map((item, index) => (
-          <MovieItem key={index} item={item} prevTitle={movies[index-1]} index={index} updateScore={updateScore} displayButton={displayButton}/>
-        ))}
-          {!lost ? (<div className='vsCircle'>
-            <div className='vsText'><b>VS</b></div>
-          </div>) : <button className='playAgain' onClick={() => reload()}>Play again?</button>}
-          
-    </div>
-    <MovieScore className='highScore' title={'High Score'} score={highscore}/>
-    <MovieScore className='curScore' title={'Score'} score={score}/>
+      <img className='background' src={bgElem} alt='hero-background'></img>
+      <audio id="clickSound" src="/boxOfficeResult.wav" preload="auto"></audio>
+      <h2 className='movieHeader'><b>BOX OFFICE HIGHER LOWER</b></h2>
+      <div className='container'>
+          {movies.map((item, index) => (
+            <MovieItem key={index} item={item} prevTitle={movies[index-1]} index={index} updateScore={updateScore} displayButton={displayButton}/>
+          ))}
+            {!lost ? (
+              <div>
+                <div className='vsCircle'>
+                  <div className='vsText'><b>VS</b></div>
+                </div>
+                <MovieScore className='highScore' title={'High Score'} score={highscore}/>
+                <MovieScore className='curScore' title={'Score'} score={score}/>
+              </div>
+          ) : <div className='playAgain'>
+                <h2>You scored: {score} </h2>
+                <br/>
+                <button className='playAgainButton' onClick={() => reload()}>Play again?</button>
+              </div>
+            }
+            
+      </div>
     </>
 
   )

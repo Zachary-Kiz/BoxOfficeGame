@@ -1,8 +1,11 @@
-import { useState } from 'react'
 import './App.css'
+import { useState } from 'react'
 import MovieItem from './components/MovieItem/MovieItem'
 import MovieScore from './components/MovieScore/MovieScore'
 import { useEffect } from 'react'
+import {disableReactDevTools} from '@fvilers/disable-react-devtools'
+
+if (import.meta.env.VITE_ENV === 'production') disableReactDevTools()
 
 const API_OPTIONS = {
   method: 'GET',
@@ -23,7 +26,7 @@ function App() {
 
   const fetchMovies = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/', API_OPTIONS);
+      const response = await fetch('https://boxoffice-api.onrender.com', API_OPTIONS);
 
       if (!response.ok) {
         throw new Error('Failed to fetch movies');

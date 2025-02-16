@@ -1,0 +1,70 @@
+.alignMovieText {
+    text-align: center;
+}
+
+.decisionButton {
+    background-color: #0a0b0d;
+    color: #1985ff;
+    border: #1985ff solid 1px;
+    transition: 0.3s;
+    margin: 7px;
+    width: 200px;
+}
+  
+.decisionButton:hover {
+    background-color: #1985ff;
+    color: white;
+}
+
+.loadMoney {
+    animation: moneyAppear 1s ease-in-out;
+}
+
+.movieItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+    min-height: 600px;
+}
+
+.movieImage {
+    height: 30vh;
+    min-height: 200px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.moneyMade {
+    color: #1985ff;
+    font-size: 30px;
+}
+  
+
+@keyframes moneyAppear {
+    0% {
+        opacity: 0.4;
+        visibility: hidden;
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0%) ;
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

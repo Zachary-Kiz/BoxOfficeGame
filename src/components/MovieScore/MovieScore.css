@@ -1,0 +1,15 @@
+.growScore {
+    animation: grow 1.5s ease-in;
+}
+
+@keyframes grow {
+    0% {
+      font-size: 16px;
+    }
+    50% {
+      font-size: 26px;
+    }
+    100% {
+      font-size: 16px;
+    }
+  }

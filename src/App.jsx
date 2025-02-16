@@ -26,7 +26,7 @@ function App() {
 
   const fetchMovies = async () => {
     try {
-      const response = await fetch('https://boxoffice-api.onrender.com', API_OPTIONS);
+      const response = await fetch('https://boxoffice-api-sutu.onrender.com', API_OPTIONS);
 
       if (!response.ok) {
         throw new Error('Failed to fetch movies');
